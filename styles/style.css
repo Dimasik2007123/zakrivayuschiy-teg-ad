@@ -11,34 +11,34 @@
 */
 
 .page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: var(--accent-color);
   font-family: var(--base-font), sans-serif;
   font-size: var(--base-font-size);
-  font-variation-settings: "wght" var(--weight-title) var(--weight-text);
-  color: var(--accent-color);
   background-image: var(--background-image);
   background-size: cover;
   background-attachment: fixed;
+  min-inline-size: 320px;
+  min-block-size: 100dvb;
+  font-variation-settings: "wght" var(--weight-title) var(--weight-text);
 }
 
 .header {
-  width: var(--content-width);
-  margin: 100px auto;
-  padding: 0;
-  height: 368px;
-  background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
+  width: var(--content-width);
+  height: 368px;
+  margin: 100px auto;
+  border: 3px solid var(--accent-color);
+  padding: 0;
   font-family: var(--accent-font), fantasy;
   text-transform: uppercase;
-  border: 3px solid var(--accent-color);
+  background-color: #fff;
 }
 
 .header__title {
@@ -51,10 +51,10 @@
 }
 
 .section {
-  width: var(--content-width);
   display: flex;
   flex-direction: column;
   gap: 50px;
+  width: var(--content-width);
 }
 
 .card {
@@ -66,11 +66,11 @@
 
 .card__title {
   height: 33px;
-  padding: 3px 24px 3px 10px;
-  font-size: 18px;
-  font-weight: var(--weight-title);
   border: 3px solid var(--accent-color);
   border-bottom: none;
+  padding: 3px 24px 3px 10px;
+  font-weight: var(--weight-title);
+  font-size: 18px;
 }
 
 .card__img-block {
@@ -83,21 +83,21 @@
   position: absolute;
   top: 0;
   right: 0;
-  padding: 27px 27px 0 0;
-  color: var(--accent-color);
-  background-blend-mode: hard-light;
-  font-size: 14px;
-  font-family: var(--accent-font), fantasy;
-  text-shadow: 0 0 0.7px var(--background-color);
-  opacity: 0.5;
   z-index: 2;
+  padding: 27px 27px 0 0;
+  opacity: 0.5;
+  color: var(--accent-color);
+  font-family: var(--accent-font), fantasy;
+  font-size: 14px;
+  text-shadow: 0 0 0.7px var(--background-color);
+  background-blend-mode: hard-light;
 }
 
 @supports (-webkit-text-stroke: 1px var(--background-color)) {
 
   .card__img-label {
-      -webkit-text-stroke: 1px var(--background-color);
       text-shadow: none;
+      -webkit-text-stroke: 1px var(--background-color);
   }
 }
 
@@ -110,6 +110,7 @@
 .card__text-container {
   border: 3px solid var(--accent-color);
   padding: 25px; 
+
 }
 
 .card__text-first {
@@ -131,20 +132,20 @@
 
 
 .dialog-open-button {
-  width: 335px;
-  height: 55px;
-  padding: 15px 0 15px 0;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
+  width: 335px;
+  height: 55px;
   margin: 0 auto;
   border: 2px solid var(--accent-color);
+  padding: 15px 0 15px 0;
   font-family: var(--accent-font), fantasy;
   font-size: 14px;
   background: var(--background-color);
   cursor: pointer;
-  position: relative;
 }
 
 .dialog-open-button::after {
@@ -182,9 +183,9 @@
 .dialog-open-button .floppy {
   position: relative;
   z-index: 1;
+  filter: invert(0);
   inline-size: 21px;
   block-size: 21px;
-  filter: invert(0);
 }
 
 .dialog-open-button:hover .floppy {
@@ -193,16 +194,16 @@
 }
 
 .modal {
-  border: 2px solid var(--accent-color);
-  padding: 30px;
-  background: var(--background-color);
-  max-width: 353px;
-  text-align: center;
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  max-width: 353px;
   margin: 0;
+  border: 2px solid var(--accent-color);
+  padding: 30px;
+  text-align: center;
+  background: var(--background-color);
+  transform: translate(-50%, -50%);
 }
 
 .modal[open] {
@@ -217,27 +218,27 @@
 }
 
 .modal__title {
+  color: var(--accent-color);
   font-family: var(--accent-font), fantasy;
   font-size: 14px;
   line-height: 1.5;
-  text-transform: uppercase;
-  color: var(--accent-color);
   text-align: left;
+  text-transform: uppercase;
 }
 
 .dialog-close-button {
-  width: 100%;
-  height: 38px;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 38px;
   border: 2px solid var(--accent-color);
+  color: var(--accent-color);
   font-family: var(--accent-font), fantasy;
   font-size: 14px;
-  background: #fff;
-  color: var(--accent-color);
   text-transform: uppercase;
-  position: relative;
+  background: #fff;
 }
 
 .dialog-close-button::after {
@@ -311,19 +312,19 @@
 }
 
 .card-buttons {
-  margin-top: 25px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 12px;
+  margin-top: 25px;
 }
 
 .card__icon-button {
-  padding: 0.5px 0;
   display: flex;
-  background: transparent;
   align-items: center;
   border: 2px solid transparent;
+  padding: 0.5px 0;
+  background: transparent;
 }
 
 .card__icon-button:focus {
@@ -390,20 +391,20 @@
 }
 
 .like-icon.is-liked .contour {
-  transition-delay: 0.06s;
-  transition: 0.3s;
   fill: var(--sparks-color);
+  transition: 0.3s;
+  transition-delay: 0.06s;
 }
 
 .like-icon.is-liked {
-  animation: heart 0.3s ease-in alternate;
-  transform-origin: center;
   transition-delay: 0.1s;
+  transform-origin: center;
+  animation: heart 0.3s ease-in alternate;
 }
 
 .like-icon.is-liked .sparks {
-  animation: sparks 0.3s ease-in alternate;
   transition-delay: 0.3s;
+  animation: sparks 0.3s ease-in alternate;
 }
 
 .like-icon .contour {
@@ -446,13 +447,13 @@
 @media (max-width: 400px) {
   .header {
     width: 100%;
-    margin: 102px 0;
     height: 327px;
+    margin: 102px 0;
   }
 
   .section {
-    width: 100%;
     gap: 50px;
+    width: 100%;
     margin: 0 0;
     padding: 0 0px;
   }
@@ -465,19 +466,20 @@
   }
 
   .dialog-open-button {
-    width: 308px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 8px;
+    width: 308px;
     height: auto;
     padding: 15px 0; 
+  
   }
 
 
   .card {
-    margin: 0;
     width: 100%;
+    margin: 0;
   }
 
   .modal {
@@ -485,17 +487,17 @@
   }
 
   .card__title {
-  height: 100%;
-  padding: 4px 10px 6px 10px;
-  font-size: 18px;
-  font-weight: var(--weight-title);
-  border: 3px solid var(--accent-color);
-  border-bottom: none;
+    height: 100%;
+    border: 3px solid var(--accent-color);
+    border-bottom: none;
+    padding: 4px 10px 6px 10px;
+    font-weight: var(--weight-title);
+    font-size: 18px;
   }
   .dialog-open-button .floppy {
-  inline-size: 28px;
-  block-size: 28px;
-}
+    inline-size: 28px;
+    block-size: 28px;
+  }
   .dialog-open-button .button__text {
     width: auto;
   }
