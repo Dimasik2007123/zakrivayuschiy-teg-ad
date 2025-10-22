@@ -96,7 +96,7 @@
 
 .card__text-container {
   border: 3px solid var(--accent-color);
-  padding: 25px; 
+  padding: 25px;
 }
 
 .card__text-first {
@@ -458,7 +458,7 @@
     gap: 8px;
     width: 308px;
     height: auto;
-    padding: 15px 0; 
+    padding: 15px 0;
   }
 
   .card {
