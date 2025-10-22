@@ -97,7 +97,6 @@
 .card__text-container {
   border: 3px solid var(--accent-color);
   padding: 25px; 
-
 }
 
 .card__text-first {
@@ -460,7 +459,6 @@
     width: 308px;
     height: auto;
     padding: 15px 0; 
-  
   }
 
   .card {
